@@ -1,0 +1,14 @@
+# LOCAL DEVELOPMENT ONLY. Never deploy or reuse these sample values.
+# Copy to .dev.vars; Wrangler loads it only for local development.
+LINK_SIGNING_SECRET=local-only-change-this-to-a-random-value-with-32-bytes-minimum
+ADMIN_USER=editor
+ADMIN_PASSWORD=local-only-password-change-me-before-deployment
+
+# External service keys are optional for local UI development.
+# Protected links remain held unless both scanner keys are configured.
+WEBRISK_API_KEY=
+URLSCAN_API_KEY=
+RESEND_API_KEY=
+EMAIL_FROM="Fieldnotes <news@example.com>"
+JOESANDBOX_API_KEY=
+JOESANDBOX_ACCEPT_TAC=0

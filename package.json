@@ -1,0 +1,19 @@
+{
+  "name": "clicktime-cloudflare-blog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A single-Worker Cloudflare blog with D1 storage and queued link scans.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/scanners.test.mjs test/email.test.mjs test/joe-sandbox.test.mjs cloudflare/security.test.mjs cloudflare/worker.test.mjs",
+    "cf:dev": "wrangler dev --config wrangler.jsonc",
+    "cf:setup-deploy": "node scripts/deploy-cloudflare.mjs",
+    "cf:deploy": "wrangler deploy --config wrangler.jsonc",
+    "cf:migrate:local": "wrangler d1 migrations apply clicktime-blog-db --local --config wrangler.jsonc",
+    "cf:migrate:remote": "wrangler d1 migrations apply clicktime-blog-db --remote --config wrangler.jsonc"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+.env
+.dev.vars
+data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+node_modules/
+.deploy-secrets.json
+.wrangler/
